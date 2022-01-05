@@ -1,0 +1,9 @@
+linguistic variable (internal),linguistic variable (for expert),fuzzy type,values,,,
+contract_price,Contract price,fuzzy,Cheap,Medium,Expensive,Very expensive
+contract_type,Contract type,crisp,Long,One-time,,
+experience,Experience,fuzzy,No experience,Novice,Experienced,Well experienced
+overall_quality,Overall quality,fuzzy,Low,Medium,Good,
+delay_delivery,Delay delivery,fuzzy,Never,Rare,Usually,Regularly
+information_share,Information Share,fuzzy,Poor,Medium,Rich,
+overall_compliance,Overall compliance,fuzzy,Low,Medium,Good,
+has_necessary_certification,Has necessary certification,crisp,No,Yes,,

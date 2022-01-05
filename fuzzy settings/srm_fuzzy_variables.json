@@ -1,0 +1,272 @@
+{
+    "contract_price": {
+        "internal_name": "contract_price",
+        "nice_name": "Contract price",
+        "universe_of_discourse": [
+            0.0,
+            1.0
+        ],
+        "fuzzy_type": "fuzzy",
+        "function_types": {
+            "foo": "Endpoint",
+            "bar": "Trapezoidal",
+            "nuar": "Trapezoidal"
+        },
+        "values": {
+            "Cheap": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Medium": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Expensive": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Very expensive": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "contract_type": {
+        "internal_name": "contract_type",
+        "nice_name": "Contract type",
+        "universe_of_discourse": [
+            0.0,
+            2.0
+        ],
+        "fuzzy_type": "crisp",
+        "function_types": {
+            "foo": "Endpoint",
+            "bar": "Trapezoidal",
+            "nuar": "Trapezoidal"
+        },
+        "values": {
+            "Long": [
+                0.0,
+                1.0
+            ],
+            "One-time": [
+                1.0,
+                2.0
+            ]
+        }
+    },
+    "experience": {
+        "internal_name": "experience",
+        "nice_name": "Experience",
+        "universe_of_discourse": [
+            0.0,
+            1.0
+        ],
+        "fuzzy_type": "fuzzy",
+        "function_types": {
+            "foo": "Endpoint",
+            "bar": "Trapezoidal",
+            "nuar": "Trapezoidal"
+        },
+        "values": {
+            "No experience": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Novice": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Experienced": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Well experienced": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "overall_quality": {
+        "internal_name": "overall_quality",
+        "nice_name": "Overall quality",
+        "universe_of_discourse": [
+            0.0,
+            1.0
+        ],
+        "fuzzy_type": "fuzzy",
+        "function_types": {
+            "foo": "Endpoint",
+            "bar": "Trapezoidal",
+            "nuar": "Trapezoidal"
+        },
+        "values": {
+            "Low": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Medium": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Good": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "delay_delivery": {
+        "internal_name": "delay_delivery",
+        "nice_name": "Delay delivery",
+        "universe_of_discourse": [
+            0.0,
+            1.0
+        ],
+        "fuzzy_type": "fuzzy",
+        "function_types": {
+            "foo": "Endpoint",
+            "bar": "Trapezoidal",
+            "nuar": "Trapezoidal"
+        },
+        "values": {
+            "Never": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Rare": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Usually": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Regularly ": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "information_share": {
+        "internal_name": "information_share",
+        "nice_name": "Information Share",
+        "universe_of_discourse": [
+            0.0,
+            1.0
+        ],
+        "fuzzy_type": "fuzzy",
+        "function_types": {
+            "foo": "Endpoint",
+            "bar": "Trapezoidal",
+            "nuar": "Trapezoidal"
+        },
+        "values": {
+            "Poor": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Medium": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Rich": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "overall_compliance": {
+        "internal_name": "overall_compliance",
+        "nice_name": "Overall compliance",
+        "universe_of_discourse": [
+            0.0,
+            1.0
+        ],
+        "fuzzy_type": "fuzzy",
+        "function_types": {
+            "foo": "Endpoint",
+            "bar": "Trapezoidal",
+            "nuar": "Trapezoidal"
+        },
+        "values": {
+            "Low": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Medium": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Good": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "has_necessary_certification": {
+        "internal_name": "has_necessary_certification",
+        "nice_name": "Has necessary certification",
+        "universe_of_discourse": [
+            0.0,
+            2.0
+        ],
+        "fuzzy_type": "crisp",
+        "function_types": {
+            "foo": "Endpoint",
+            "bar": "Trapezoidal",
+            "nuar": "Trapezoidal"
+        },
+        "values": {
+            "No": [
+                0.0,
+                1.0
+            ],
+            "Yes": [
+                1.0,
+                2.0
+            ]
+        }
+    }
+}

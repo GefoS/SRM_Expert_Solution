@@ -1,0 +1,12 @@
+Fuzzy variable (internal),Fuzzy variable (human),Type,values,,,,
+contract_price,Contract price,Nice name,Very_cheap,Cheap,Medium,Expensive,Very_expensive
+contract_price,Contract price,Fuzzy value,1000,2500,5000,10000,25000
+information_share,Information share,Nice name,Poor,Medium,Rich,,
+information_share,Information share,Fuzzy value,33,50,66,,
+information_share,Information share,Threshold,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+necessity ,Necessity,Fuzzy values,Arbitrary,Useful,Necessary,Mandatory,Vital
