@@ -1,6 +1,7 @@
 import csv
 import json
 import globals
+import matplotlib.pyplot as plt
 
 fuzzy_variable_template = {
     'internal_name' : "internal_name_2",
@@ -73,6 +74,31 @@ def gen_init_crisp_values(values_names):
         result[name] = [i-1, i].copy()
         i += 1
     return result
+
+
+def plot_membership_function(values, fuz_type, variable_name, internal_name):
+    y_value = []
+    if fuz_type == 'fuzzy':
+        y_value = [0,1,1,0]
+    elif fuz_type == 'crisp':
+        y_value = [1, 1]
+    else:
+        return None
+
+    fig, ax = plt.subplots()
+    for value, point in values.items():
+        plt.plot(point, y_value, label=value)
+
+    ax.set_xlabel(variable_name)
+    ax.set_ylabel('Membership function')
+    plt.legend()
+    plt.savefig(get_plot_img_name(internal_name))
+    plt.clf()
+    plt.cla()
+
+
+def get_plot_img_name(var_name):
+    return 'function_plots/'+var_name+'_plot.png'
 
 
 def init_fuzzy_file():

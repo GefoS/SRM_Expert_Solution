@@ -15,8 +15,8 @@
         "values": {
             "Cheap": [
                 0.0,
-                0.0,
-                0.0,
+                100.0,
+                10000.0,
                 0.0
             ],
             "Medium": [
@@ -169,7 +169,7 @@
                 0.0,
                 0.0
             ],
-            "Regularly ": [
+            "Regularly": [
                 0.0,
                 0.0,
                 0.0,
@@ -266,6 +266,244 @@
             "Yes": [
                 1.0,
                 2.0
+            ]
+        }
+    },
+    "overall_compliance1": {
+        "internal_name": "overall_compliance1",
+        "nice_name": "overall_compliance1",
+        "universe_of_discourse": [
+            0.0,
+            1.0
+        ],
+        "fuzzy_type": "fuzzy",
+        "function_types": {
+            "foo": "Endpoint",
+            "bar": "Trapezoidal",
+            "nuar": "Trapezoidal"
+        },
+        "values": {
+            "Low": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Medium": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Good": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "overall_compliance2": {
+        "internal_name": "overall_compliance2",
+        "nice_name": "overall_compliance2",
+        "universe_of_discourse": [
+            0.0,
+            1.0
+        ],
+        "fuzzy_type": "fuzzy",
+        "function_types": {
+            "foo": "Endpoint",
+            "bar": "Trapezoidal",
+            "nuar": "Trapezoidal"
+        },
+        "values": {
+            "Low": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Medium": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Good": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "overall_compliance3": {
+        "internal_name": "overall_compliance3",
+        "nice_name": "overall_compliance3",
+        "universe_of_discourse": [
+            0.0,
+            1.0
+        ],
+        "fuzzy_type": "fuzzy",
+        "function_types": {
+            "foo": "Endpoint",
+            "bar": "Trapezoidal",
+            "nuar": "Trapezoidal"
+        },
+        "values": {
+            "Low": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Medium": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Good": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "overall_compliance4": {
+        "internal_name": "overall_compliance4",
+        "nice_name": "overall_compliance4",
+        "universe_of_discourse": [
+            0.0,
+            1.0
+        ],
+        "fuzzy_type": "fuzzy",
+        "function_types": {
+            "foo": "Endpoint",
+            "bar": "Trapezoidal",
+            "nuar": "Trapezoidal"
+        },
+        "values": {
+            "Low": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Medium": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Good": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "overall_compliance5": {
+        "internal_name": "overall_compliance5",
+        "nice_name": "overall_compliance5",
+        "universe_of_discourse": [
+            0.0,
+            1.0
+        ],
+        "fuzzy_type": "fuzzy",
+        "function_types": {
+            "foo": "Endpoint",
+            "bar": "Trapezoidal",
+            "nuar": "Trapezoidal"
+        },
+        "values": {
+            "Low": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Medium": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Good": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "overall_compliance6": {
+        "internal_name": "overall_compliance6",
+        "nice_name": "overall_compliance6",
+        "universe_of_discourse": [
+            0.0,
+            1.0
+        ],
+        "fuzzy_type": "fuzzy",
+        "function_types": {
+            "foo": "Endpoint",
+            "bar": "Trapezoidal",
+            "nuar": "Trapezoidal"
+        },
+        "values": {
+            "Low": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Medium": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Good": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "overall_compliance7": {
+        "internal_name": "overall_compliance7",
+        "nice_name": "overall_compliance7",
+        "universe_of_discourse": [
+            0.0,
+            1.0
+        ],
+        "fuzzy_type": "fuzzy",
+        "function_types": {
+            "foo": "Endpoint",
+            "bar": "Trapezoidal",
+            "nuar": "Trapezoidal"
+        },
+        "values": {
+            "Low": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Medium": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Good": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ]
         }
     }

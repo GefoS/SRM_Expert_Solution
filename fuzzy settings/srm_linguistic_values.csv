@@ -5,5 +5,10 @@ experience,Experience,fuzzy,No experience,Novice,Experienced,Well experienced
 overall_quality,Overall quality,fuzzy,Low,Medium,Good,
 delay_delivery,Delay delivery,fuzzy,Never,Rare,Usually,Regularly
 information_share,Information Share,fuzzy,Poor,Medium,Rich,
+overall_communications,Overall communications,fuzzy,Low,Medium,Good,
+financial_sustainability,Financial sustainability,fuzzy,bankruptcy ,Low,Medium,Good
 overall_compliance,Overall compliance,fuzzy,Low,Medium,Good,
 has_necessary_certification,Has necessary certification,crisp,No,Yes,,
+court_history,Court history,crisp,Bad,Proper,Good,
+environment_safety,Environment safety,fuzzy,Low,Medium,Good,
+work_safety,Work safety,fuzzy,Low,Medium,Good,

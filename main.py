@@ -1,5 +1,4 @@
 from PySide2 import QtWidgets
-from Ui_MainWindow import Ui_MainWindow
 import ui_fuzzy_assigner
 import sys
 
