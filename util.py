@@ -85,6 +85,7 @@ def plot_membership_function(values, fuz_type, variable_name, internal_name):
     else:
         return None
 
+    plt.close('all')
     fig, ax = plt.subplots()
     for value, point in values.items():
         plt.plot(point, y_value, label=value)
@@ -93,8 +94,6 @@ def plot_membership_function(values, fuz_type, variable_name, internal_name):
     ax.set_ylabel('Membership function')
     plt.legend()
     plt.savefig(get_plot_img_name(internal_name))
-    plt.clf()
-    plt.cla()
 
 
 def get_plot_img_name(var_name):

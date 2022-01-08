@@ -1,0 +1,15 @@
+internal_name,nice_name,measure
+contract_price,Contract price,USD
+contract_type,Contract type,Crisp value
+experience,Experience,Years
+overall_quality,Overall quality,Ten-point scale
+delayed_deliveries,Delayed deliveries,Percentage
+average_delay_delivery,Average delay delivery,Hours (average)
+information_share,Information Share,Ten-point scale
+overall_communications,Overall communications,Ten-point scale
+financial_sustainability,Financial sustainability,Ten-point scale
+overall_compliance,Overall compliance,Percentage
+has_necessary_certification,Has necessary certification,Crisp value
+court_history,Court history,Crisp value
+environment_safety,Environment safety,Ten-point scale
+work_safety,Work safety,Ten-point scale

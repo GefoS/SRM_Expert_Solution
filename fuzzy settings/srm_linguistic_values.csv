@@ -3,7 +3,8 @@ contract_price,Contract price,fuzzy,Cheap,Medium,Expensive,Very expensive
 contract_type,Contract type,crisp,Long,One-time,,
 experience,Experience,fuzzy,No experience,Novice,Experienced,Well experienced
 overall_quality,Overall quality,fuzzy,Low,Medium,Good,
-delay_delivery,Delay delivery,fuzzy,Never,Rare,Usually,Regularly
+delayed_deliveries,Delayed deliveries,fuzzy,Never,Rare,Usually,Regularly
+average_delay_delivery,Average delay delivery,fuzzy,None,Few,Several,Many
 information_share,Information Share,fuzzy,Poor,Medium,Rich,
 overall_communications,Overall communications,fuzzy,Low,Medium,Good,
 financial_sustainability,Financial sustainability,fuzzy,bankruptcy ,Low,Medium,Good

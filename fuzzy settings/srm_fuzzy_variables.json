@@ -4,7 +4,7 @@
         "nice_name": "Contract price",
         "universe_of_discourse": [
             0.0,
-            1.0
+            750000.0
         ],
         "fuzzy_type": "fuzzy",
         "function_types": {
@@ -15,27 +15,27 @@
         "values": {
             "Cheap": [
                 0.0,
-                100.0,
-                10000.0,
-                0.0
+                0.0,
+                800.0,
+                1200.0
             ],
             "Medium": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
+                700.0,
+                1300.0,
+                5000.0,
+                8000.0
             ],
             "Expensive": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
+                6500.0,
+                10000.0,
+                25000.0,
+                250000.0
             ],
             "Very expensive": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
+                30000.0,
+                100000.0,
+                750000.0,
+                750000.0
             ]
         }
     },
@@ -67,8 +67,8 @@
         "internal_name": "experience",
         "nice_name": "Experience",
         "universe_of_discourse": [
-            0.0,
-            1.0
+            1.0,
+            35.0
         ],
         "fuzzy_type": "fuzzy",
         "function_types": {
@@ -80,26 +80,26 @@
             "No experience": [
                 0.0,
                 0.0,
-                0.0,
-                0.0
+                0.2,
+                1.0
             ],
             "Novice": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
+                0.5,
+                1.0,
+                3.0,
+                4.25
             ],
             "Experienced": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
+                2.75,
+                4.5,
+                10.0,
+                15.0
             ],
             "Well experienced": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
+                8.0,
+                20.0,
+                35.0,
+                35.0
             ]
         }
     },
@@ -108,7 +108,7 @@
         "nice_name": "Overall quality",
         "universe_of_discourse": [
             0.0,
-            1.0
+            10.0
         ],
         "fuzzy_type": "fuzzy",
         "function_types": {
@@ -120,29 +120,29 @@
             "Low": [
                 0.0,
                 0.0,
-                0.0,
-                0.0
+                2.33,
+                3.5
             ],
             "Medium": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
+                2.25,
+                3.25,
+                5.5,
+                6.75
             ],
             "Good": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
+                5.2,
+                7.0,
+                10.0,
+                10.0
             ]
         }
     },
-    "delay_delivery": {
-        "internal_name": "delay_delivery",
-        "nice_name": "Delay delivery",
+    "delayed_deliveries": {
+        "internal_name": "delayed_deliveries",
+        "nice_name": "Delayed deliveries",
         "universe_of_discourse": [
             0.0,
-            1.0
+            100.0
         ],
         "fuzzy_type": "fuzzy",
         "function_types": {
@@ -154,26 +154,66 @@
             "Never": [
                 0.0,
                 0.0,
-                0.0,
-                0.0
+                2.5,
+                5.0
             ],
             "Rare": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
+                2.0,
+                10.0,
+                13.5,
+                20.0
             ],
             "Usually": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
+                11.15,
+                22.5,
+                30.0,
+                42.0
             ],
             "Regularly": [
+                33.0,
+                66.0,
+                100.0,
+                100.0
+            ]
+        }
+    },
+    "average_delay_delivery": {
+        "internal_name": "average_delay_delivery",
+        "nice_name": "Average delay delivery",
+        "universe_of_discourse": [
+            0.0,
+            8.0
+        ],
+        "fuzzy_type": "fuzzy",
+        "function_types": {
+            "foo": "Endpoint",
+            "bar": "Trapezoidal",
+            "nuar": "Trapezoidal"
+        },
+        "values": {
+            "None": [
                 0.0,
                 0.0,
-                0.0,
-                0.0
+                0.5,
+                1.35
+            ],
+            "Few": [
+                0.75,
+                1.25,
+                1.75,
+                2.66
+            ],
+            "Several": [
+                2.0,
+                3.0,
+                5.0,
+                6.0
+            ],
+            "Many": [
+                4.5,
+                5.5,
+                8.0,
+                8.0
             ]
         }
     },
@@ -182,7 +222,7 @@
         "nice_name": "Information Share",
         "universe_of_discourse": [
             0.0,
-            1.0
+            10.0
         ],
         "fuzzy_type": "fuzzy",
         "function_types": {
@@ -194,29 +234,29 @@
             "Poor": [
                 0.0,
                 0.0,
-                0.0,
-                0.0
+                2.0,
+                3.5
             ],
             "Medium": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
+                2.0,
+                4.0,
+                5.5,
+                6.5
             ],
             "Rich": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
+                5.8,
+                8.0,
+                10.0,
+                10.0
             ]
         }
     },
-    "overall_compliance": {
-        "internal_name": "overall_compliance",
-        "nice_name": "Overall compliance",
+    "overall_communications": {
+        "internal_name": "overall_communications",
+        "nice_name": "Overall communications",
         "universe_of_discourse": [
             0.0,
-            1.0
+            10.0
         ],
         "fuzzy_type": "fuzzy",
         "function_types": {
@@ -228,20 +268,94 @@
             "Low": [
                 0.0,
                 0.0,
-                0.0,
-                0.0
+                2.33,
+                3.5
             ],
             "Medium": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
+                2.25,
+                3.25,
+                5.5,
+                6.75
             ],
             "Good": [
+                5.2,
+                7.0,
+                10.0,
+                10.0
+            ]
+        }
+    },
+    "financial_sustainability": {
+        "internal_name": "financial_sustainability",
+        "nice_name": "Financial sustainability",
+        "universe_of_discourse": [
+            0.0,
+            10.0
+        ],
+        "fuzzy_type": "fuzzy",
+        "function_types": {
+            "foo": "Endpoint",
+            "bar": "Trapezoidal",
+            "nuar": "Trapezoidal"
+        },
+        "values": {
+            "bankruptcy ": [
                 0.0,
                 0.0,
+                0.5,
+                1.0
+            ],
+            "Low": [
+                0.75,
+                1.0,
+                2.33,
+                3.5
+            ],
+            "Medium": [
+                2.25,
+                3.25,
+                5.5,
+                6.75
+            ],
+            "Good": [
+                5.2,
+                7.0,
+                10.0,
+                10.0
+            ]
+        }
+    },
+    "overall_compliance": {
+        "internal_name": "overall_compliance",
+        "nice_name": "Overall compliance",
+        "universe_of_discourse": [
+            0.0,
+            10.0
+        ],
+        "fuzzy_type": "fuzzy",
+        "function_types": {
+            "foo": "Endpoint",
+            "bar": "Trapezoidal",
+            "nuar": "Trapezoidal"
+        },
+        "values": {
+            "Low": [
                 0.0,
-                0.0
+                0.0,
+                2.33,
+                3.5
+            ],
+            "Medium": [
+                2.25,
+                3.25,
+                5.5,
+                6.75
+            ],
+            "Good": [
+                5.2,
+                7.0,
+                10.0,
+                10.0
             ]
         }
     },
@@ -269,46 +383,40 @@
             ]
         }
     },
-    "overall_compliance1": {
-        "internal_name": "overall_compliance1",
-        "nice_name": "overall_compliance1",
+    "court_history": {
+        "internal_name": "court_history",
+        "nice_name": "Court history",
         "universe_of_discourse": [
             0.0,
-            1.0
+            3.0
         ],
-        "fuzzy_type": "fuzzy",
+        "fuzzy_type": "crisp",
         "function_types": {
             "foo": "Endpoint",
             "bar": "Trapezoidal",
             "nuar": "Trapezoidal"
         },
         "values": {
-            "Low": [
+            "Bad": [
                 0.0,
-                0.0,
-                0.0,
-                0.0
+                1.0
             ],
-            "Medium": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
+            "Proper": [
+                1.0,
+                2.0
             ],
             "Good": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
+                2.0,
+                3.0
             ]
         }
     },
-    "overall_compliance2": {
-        "internal_name": "overall_compliance2",
-        "nice_name": "overall_compliance2",
+    "environment_safety": {
+        "internal_name": "environment_safety",
+        "nice_name": "Environment safety",
         "universe_of_discourse": [
             0.0,
-            1.0
+            10.0
         ],
         "fuzzy_type": "fuzzy",
         "function_types": {
@@ -320,29 +428,29 @@
             "Low": [
                 0.0,
                 0.0,
-                0.0,
-                0.0
+                2.33,
+                3.5
             ],
             "Medium": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
+                2.25,
+                3.25,
+                5.5,
+                6.75
             ],
             "Good": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
+                5.2,
+                7.0,
+                10.0,
+                10.0
             ]
         }
     },
-    "overall_compliance3": {
-        "internal_name": "overall_compliance3",
-        "nice_name": "overall_compliance3",
+    "work_safety": {
+        "internal_name": "work_safety",
+        "nice_name": "Work safety",
         "universe_of_discourse": [
             0.0,
-            1.0
+            10.0
         ],
         "fuzzy_type": "fuzzy",
         "function_types": {
@@ -354,156 +462,20 @@
             "Low": [
                 0.0,
                 0.0,
-                0.0,
-                0.0
+                2.33,
+                3.5
             ],
             "Medium": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
+                2.25,
+                3.25,
+                5.5,
+                6.75
             ],
             "Good": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ]
-        }
-    },
-    "overall_compliance4": {
-        "internal_name": "overall_compliance4",
-        "nice_name": "overall_compliance4",
-        "universe_of_discourse": [
-            0.0,
-            1.0
-        ],
-        "fuzzy_type": "fuzzy",
-        "function_types": {
-            "foo": "Endpoint",
-            "bar": "Trapezoidal",
-            "nuar": "Trapezoidal"
-        },
-        "values": {
-            "Low": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "Medium": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "Good": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ]
-        }
-    },
-    "overall_compliance5": {
-        "internal_name": "overall_compliance5",
-        "nice_name": "overall_compliance5",
-        "universe_of_discourse": [
-            0.0,
-            1.0
-        ],
-        "fuzzy_type": "fuzzy",
-        "function_types": {
-            "foo": "Endpoint",
-            "bar": "Trapezoidal",
-            "nuar": "Trapezoidal"
-        },
-        "values": {
-            "Low": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "Medium": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "Good": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ]
-        }
-    },
-    "overall_compliance6": {
-        "internal_name": "overall_compliance6",
-        "nice_name": "overall_compliance6",
-        "universe_of_discourse": [
-            0.0,
-            1.0
-        ],
-        "fuzzy_type": "fuzzy",
-        "function_types": {
-            "foo": "Endpoint",
-            "bar": "Trapezoidal",
-            "nuar": "Trapezoidal"
-        },
-        "values": {
-            "Low": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "Medium": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "Good": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ]
-        }
-    },
-    "overall_compliance7": {
-        "internal_name": "overall_compliance7",
-        "nice_name": "overall_compliance7",
-        "universe_of_discourse": [
-            0.0,
-            1.0
-        ],
-        "fuzzy_type": "fuzzy",
-        "function_types": {
-            "foo": "Endpoint",
-            "bar": "Trapezoidal",
-            "nuar": "Trapezoidal"
-        },
-        "values": {
-            "Low": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "Medium": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "Good": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
+                5.2,
+                7.0,
+                10.0,
+                10.0
             ]
         }
     }

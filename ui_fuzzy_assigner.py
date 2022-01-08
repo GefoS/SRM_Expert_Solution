@@ -1,22 +1,12 @@
-# -*- coding: utf-8 -*-
-
-################################################################################
-## Form generated from reading UI file 'untitlednQhgMq.ui'
-##
-## Created by: Qt User Interface Compiler version 5.15.2
-##
-## WARNING! All changes made in this file will be lost when recompiling UI file!
-################################################################################
-
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
 from os import path
+import csv
 
 import globals
 import util
-
 
 class Ui_fuzzy_assigner_window(object):
     def __init__(self):
@@ -26,6 +16,7 @@ class Ui_fuzzy_assigner_window(object):
         self.membership_func_plots = []
         self.table_meta = []
 
+        self.variables_measures = load_measures_settings()
         have_unsaved_changes = False
 
     def setupUi(self, fuzzy_assigner_window):
@@ -74,9 +65,12 @@ class Ui_fuzzy_assigner_window(object):
 
         self.retranslateUi(fuzzy_assigner_window)
         self.actionSave.triggered.connect(self.save_variables_settings)
+        self.tab_widget.currentChanged.connect(self.change_measurement_label_text)
 
         for table in self.fuzzy_variables_tables:
             table.cellChanged.connect(self.repaint_current_plot)
+
+        self.change_measurement_label_text()
 
         QMetaObject.connectSlotsByName(fuzzy_assigner_window)
 
@@ -104,7 +98,8 @@ class Ui_fuzzy_assigner_window(object):
                                                      float(table.item(table.rowCount() - 1, 1).text())]
             var_settings['values'] = new_values.copy()
             new_variables.append(var_settings)
-        print(new_variables)
+
+        util.save_fuzzy_variables(new_variables, True)
 
     def load_variables_settings(self, tab_widget):
         current_variables_settings = util.load_fuzzy_variables()
@@ -158,6 +153,7 @@ class Ui_fuzzy_assigner_window(object):
             n_grid.addWidget(plot_lab, 1, 0, 1, 1)
             # plot_lab.re
 
+
             self.membership_func_plots.append((plot_lab, util.get_plot_img_name(v.get('internal_name'))))
             self.table_meta.append((
                 v.get('internal_name'),
@@ -178,6 +174,14 @@ class Ui_fuzzy_assigner_window(object):
 
     # retranslateUi
 
+    def change_measurement_label_text(self):
+        nice_name, measure = self.variables_measures.get(
+            self.fuzzy_variables_tabs[self.tab_widget.currentIndex()].objectName()
+        )
+        i = 0
+
+        self.variable_explain_lab.setText(nice_name+' - '+measure)
+
 
 def get_values_from_table(table, fuz_type):
     new_values = {}
@@ -188,7 +192,6 @@ def get_values_from_table(table, fuz_type):
         column_range = range(2)
     for r in range(table.rowCount() - 1):
         val_name = table.verticalHeaderItem(r).text()
-        print(r)
         new_values[val_name] = [float(table.item(r, c).text()) for c in column_range]
     return new_values
 
@@ -196,3 +199,13 @@ def get_values_from_table(table, fuz_type):
 def set_resized_pixmap(label, img_path):
     pix = QPixmap(img_path)
     label.setPixmap(pix.scaled(1024, 350, Qt.KeepAspectRatio, Qt.SmoothTransformation))
+
+
+def load_measures_settings():
+    measures = {}
+
+    with open(globals.VARIABLES_MEASURES, newline='') as csvfile:
+        reader = csv.reader(csvfile, delimiter=globals.CSV_DELIMITER)
+        for row in list(reader)[1:]:
+            measures[row[0]] = (row[1], row[2])
+    return measures
