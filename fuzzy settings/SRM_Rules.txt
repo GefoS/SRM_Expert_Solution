@@ -1,0 +1,33 @@
+Rule_Cluster:Contracting
+IF (((contract_price IS Very_expensive) OR (contract_price IS Expensive)) AND ((financial_sustainability IS Medium) OR (financial_sustainability IS Good))) THEN (contract_risk IS Risky)
+IF (((contract_price IS Very_expensive) OR (contract_price IS Expensive)) AND ((financial_sustainability IS Bankruptcy) OR (financial_sustainability IS Low))) THEN (contract_risk IS Very_risky)
+IF ((contract_price IS Medium) AND (contract_type IS One_time)) THEN (contract_risk IS Risky)
+IF (contract_price IS Cheap) THEN (contract_risk IS Stable)
+IF (contract_type IS Long) THEN (contract_risk IS Risky)
+Rule_Cluster:Main
+IF ((delayed_deliveries IS Never) AND (average_delay_delivery IS None)) THEN (Supplying IS best)
+IF ((delayed_deliveries IS Rare) OR (average_delay_delivery IS Few)) THEN (Supplying IS best)
+IF ((delayed_deliveries IS Rare) OR (average_delay_delivery IS None)) THEN (Supplying IS best)
+IF ((delayed_deliveries IS Never) OR (average_delay_delivery IS Few)) THEN (Supplying IS best)
+IF ((delayed_deliveries IS Usually) OR (average_delay_delivery IS Several)) THEN (Supplying IS acceptable)
+IF ((delayed_deliveries IS Rare) AND (average_delay_delivery IS Many)) THEN (Supplying IS acceptable)
+IF ((delayed_deliveries IS Regularly) AND (average_delay_delivery IS Few)) THEN (Supplying IS acceptable)
+IF ((delayed_deliveries IS Regularly) AND (average_delay_delivery IS Many)) THEN (Supplying IS bad)
+IF (((delayed_deliveries IS Usually) OR (average_delay_delivery IS Several)) AND (overall_quality IS Good)) THEN (Supplying IS good)
+IF (((delayed_deliveries IS Regularly) AND (average_delay_delivery IS Few))  AND (overall_quality IS Good)) THEN (Supplying IS good)
+Rule_Cluster:Test
+IF (((delayed_deliveries IS Rare) OR (delayed_deliveries IS Never)) AND (average_delay_delivery IS None)) THEN (Quality IS best)
+IF (((delayed_deliveries IS Usually) OR (delayed_deliveries IS Regularly)) AND ((average_delay_delivery IS Few) OR (average_delay_delivery IS Several))) THEN (Quality IS acceptable)
+IF ((delayed_deliveries IS Regularly) OR (average_delay_delivery IS Many)) THEN (Quality IS bad)
+Rule_Cluster:Test1
+IF (((delayed_deliveries IS Rare) OR (delayed_deliveries IS Never)) AND (average_delay_delivery IS None)) THEN (Quality IS best)
+IF (((delayed_deliveries IS Usually) OR (delayed_deliveries IS Regularly)) AND ((average_delay_delivery IS Few) OR (average_delay_delivery IS Several))) THEN (Quality IS acceptable)
+IF ((delayed_deliveries IS Regularly) OR (average_delay_delivery IS Many)) THEN (Quality IS bad)
+Rule_Cluster:Test2
+IF (((delayed_deliveries IS Rare) OR (delayed_deliveries IS Never)) AND (average_delay_delivery IS None)) THEN (Quality IS best)
+IF (((delayed_deliveries IS Usually) OR (delayed_deliveries IS Regularly)) AND ((average_delay_delivery IS Few) OR (average_delay_delivery IS Several))) THEN (Quality IS acceptable)
+IF ((delayed_deliveries IS Regularly) OR (average_delay_delivery IS Many)) THEN (Quality IS bad)
+Rule_Cluster:Test3
+IF (((delayed_deliveries IS Rare) OR (delayed_deliveries IS Never)) AND (average_delay_delivery IS None)) THEN (Quality IS best)
+IF (((delayed_deliveries IS Usually) OR (delayed_deliveries IS Regularly)) AND ((average_delay_delivery IS Few) OR (average_delay_delivery IS Several))) THEN (Quality IS acceptable)
+IF ((delayed_deliveries IS Regularly) OR (average_delay_delivery IS Many)) THEN (Quality IS bad)

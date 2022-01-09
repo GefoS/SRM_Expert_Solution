@@ -1,6 +1,6 @@
 import csv
 import json
-import globals
+import global_params
 import matplotlib.pyplot as plt
 
 fuzzy_variable_template = {
@@ -48,17 +48,22 @@ def save_fuzzy_variables(fuzzy_variables, overwrite=False):
         for var in fuzzy_variables:
             current_settings[var.get('internal_name')] = var
         dumped_dict = current_settings.copy()
-    json_file = open(globals.FUZZY_VARIABLES_FILE, 'w')
+    json_file = open(global_params.FUZZY_VARIABLES_FILE, 'w')
     json_file.write(json.dumps(dumped_dict, indent=4))
     json_file.close()
 
 
 def load_fuzzy_variables():
-    json_file = open(globals.FUZZY_VARIABLES_FILE, "r")
+    json_file = open(global_params.FUZZY_VARIABLES_FILE, "r")
     fuzzy_variables = json.loads(json_file.read())
     json_file.close()
     return fuzzy_variables
 
+
+def load_saved_variables():
+    with open(global_params.RESULT_SCORES_FILE, "r") as json_file:
+        saved_vars = json.loads(json_file.read())
+        return saved_vars
 
 def gen_init_fuzzy_values(values_names):
     result = {}
@@ -103,7 +108,7 @@ def get_plot_img_name(var_name):
 def init_fuzzy_file():
     linguistic_variables = []
 
-    with open(globals.LINGUISTIC_VALUES_FILE, newline='') as csvfile:
+    with open(global_params.LINGUISTIC_VALUES_FILE, newline='') as csvfile:
         reader = csv.reader(csvfile, delimiter=',')
         for row in list(reader)[1:]:
             row = list(filter(lambda item: item, row))

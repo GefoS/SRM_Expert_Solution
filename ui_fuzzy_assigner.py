@@ -5,7 +5,7 @@ from PySide2.QtWidgets import *
 from os import path
 import csv
 
-import globals
+import global_params
 import util
 
 class Ui_fuzzy_assigner_window(object):
@@ -116,7 +116,7 @@ class Ui_fuzzy_assigner_window(object):
                 n_table.setColumnCount(4)
             for c in range(4):
                 n_table.setHorizontalHeaderItem(c, QTableWidgetItem())
-                n_table.horizontalHeaderItem(c).setText(globals.TABLE_COLUMN_NAMES[c]);
+                n_table.horizontalHeaderItem(c).setText(global_params.TABLE_COLUMN_NAMES[c]);
 
             variables_count = len(v.get('values').values())
             if n_table.rowCount() < variables_count:
@@ -204,8 +204,8 @@ def set_resized_pixmap(label, img_path):
 def load_measures_settings():
     measures = {}
 
-    with open(globals.VARIABLES_MEASURES, newline='') as csvfile:
-        reader = csv.reader(csvfile, delimiter=globals.CSV_DELIMITER)
+    with open(global_params.VARIABLES_MEASURES, newline='') as csvfile:
+        reader = csv.reader(csvfile, delimiter=global_params.CSV_DELIMITER)
         for row in list(reader)[1:]:
             measures[row[0]] = (row[1], row[2])
     return measures

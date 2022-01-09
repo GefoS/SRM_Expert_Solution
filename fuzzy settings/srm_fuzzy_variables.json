@@ -31,7 +31,7 @@
                 25000.0,
                 250000.0
             ],
-            "Very expensive": [
+            "Very_expensive": [
                 30000.0,
                 100000.0,
                 750000.0,
@@ -57,7 +57,7 @@
                 0.0,
                 1.0
             ],
-            "One-time": [
+            "One_time": [
                 1.0,
                 2.0
             ]
@@ -95,7 +95,7 @@
                 10.0,
                 15.0
             ],
-            "Well experienced": [
+            "Well_experienced": [
                 8.0,
                 20.0,
                 35.0,
@@ -166,8 +166,8 @@
             "Usually": [
                 11.15,
                 22.5,
-                30.0,
-                42.0
+                35.5,
+                50.0
             ],
             "Regularly": [
                 33.0,
@@ -299,7 +299,7 @@
             "nuar": "Trapezoidal"
         },
         "values": {
-            "bankruptcy ": [
+            "Bankruptcy": [
                 0.0,
                 0.0,
                 0.5,
@@ -476,6 +476,34 @@
                 7.0,
                 10.0,
                 10.0
+            ]
+        }
+    },
+    "contract_risk": {
+        "internal_name": "contract_risk",
+        "nice_name": "Risk of a contract",
+        "universe_of_discourse": [
+            0.0,
+            3.0
+        ],
+        "fuzzy_type": "crisp",
+        "function_types": {
+            "foo": "Endpoint",
+            "bar": "Trapezoidal",
+            "nuar": "Trapezoidal"
+        },
+        "values": {
+            "Very_risky": [
+                0.0,
+                1.0
+            ],
+            "Risky": [
+                1.0,
+                2.0
+            ],
+            "Stable": [
+                2.0,
+                3.0
             ]
         }
     }

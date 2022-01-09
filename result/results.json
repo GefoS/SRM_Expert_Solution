@@ -1,0 +1,20 @@
+{
+    "ER-Telekom Holding": {
+        "contract_price": 650000.0,
+        "contract_type": 2,
+        "experience": 6.0,
+        "overall_quality": 0.0,
+        "delayed_deliveries": 10.0,
+        "average_delay_delivery": 2.0,
+        "information_share": 0.0,
+        "overall_communications": 0.0,
+        "financial_sustainability": 0.0,
+        "overall_compliance": 0.0,
+        "has_necessary_certification": 0,
+        "court_history_defender": 0,
+        "court_history_plaintiff": 0,
+        "court_history_third_side": 0,
+        "environment_safety": 0.0,
+        "work_safety": 0.0
+    }
+}
