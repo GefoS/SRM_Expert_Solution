@@ -1,0 +1,10 @@
+{
+    "RESULT_WEIGHT_FACTOR": 0.9,
+    "0": {
+        "Supplying": 0.4,
+        "Quality_as_BP": 0.3,
+        "Communications": 0.05,
+        "Legal_and_Compliance": 0.2,
+        "EHS": 0.05
+    }
+}

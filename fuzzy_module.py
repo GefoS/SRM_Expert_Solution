@@ -1,3 +1,5 @@
+import random
+
 from simpful import *
 
 import util
@@ -46,6 +48,10 @@ class FuzzyModule(object):
         # self.supplying_fs.add_linguistic_variable('average_delay_delivery',
         #                                           self.fuzzy_sets.get('average_delay_delivery'))
         self.main_fuzzy_system.add_linguistic_variable('Supplying', get_uniform_four_set())
+        self.main_fuzzy_system.add_linguistic_variable('Quality_as_BP', get_uniform_four_set())
+        self.main_fuzzy_system.add_linguistic_variable('Communications', get_uniform_four_set())
+        self.main_fuzzy_system.add_linguistic_variable('Legal_and_Compliance', get_uniform_four_set())
+        self.main_fuzzy_system.add_linguistic_variable('EHS', get_uniform_four_set())
         self.main_fuzzy_system.add_rules(self.fuzzy_rules.get('Main'))
 
         # self.main_fuzzy_system.set_variable('delayed_deliveries', 5)
@@ -56,16 +62,31 @@ class FuzzyModule(object):
         # self.main_fuzzy_system.set_variable('overall_quality', 9)
 
     def set_variables_val_in_module(self, variables_values):
+        ch = random.uniform(0,3)
+        print(ch)
+        self.main_fuzzy_system.set_variable('court_history', ch)
         for k, v in variables_values.items():
             if k not in global_params.COURT_VARIABLES_NAMES:
                 self.main_fuzzy_system.set_variable(k, v)
 
-    def fire_fuzzy_system(self, system_num):
-        if system_num == 0:
-            pass
-        elif system_num == 0:
-            pass
-        return self.main_fuzzy_system.inference()
+    def fire_main_fuzzy_system(self, version=0):
+        firing_result = self.main_fuzzy_system.inference()
+        weights = util.load_score_weights(version)
+
+        weighted_final_scores = []
+        for k, v in firing_result.items():
+            rescale_weight = util.load_score_weights('RESULT_WEIGHT_FACTOR')
+            print(rescale_weight)
+            rescaled_score = rescale_weight*(abs(5 - v)/4)
+            firing_result[k] = rescaled_score
+            weight = weights.get(k, False)
+            if weight:
+                weighted_final_scores.append(v*rescaled_score)
+            else:
+                weighted_final_scores.append(rescaled_score)
+
+        weighted_avg = sum(weighted_final_scores)/len(weighted_final_scores)
+        return firing_result, weighted_final_scores, weighted_avg
 
 def fuzzify_all_variables():
     fuzzy_sets = {}
@@ -116,3 +137,5 @@ def is_undefined_result(fuzzy_system):
 def get_uniform_four_set():
     return AutoTriangle(n_sets=4, terms=['bad', 'acceptable', 'good', 'best'],
                         universe_of_discourse=[0, 10], verbose=False)
+
+

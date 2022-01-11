@@ -126,3 +126,9 @@ def init_fuzzy_file():
             linguistic_variables.append(new_fuzzy_var)
 
     save_fuzzy_variables(linguistic_variables, True)
+
+
+def load_score_weights(version):
+    with open(global_params.SCORE_WEIGHTS_FILE, "r") as json_file:
+        weights = json.loads(json_file.read())
+    return weights.get(str(version))

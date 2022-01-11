@@ -10,3 +10,4 @@ COURT_VARIABLES_NAMES = [
             "court_history_plaintiff",
             "court_history_third_side"
 ]
+SCORE_WEIGHTS_FILE = "fuzzy settings/srm_score_weights.json"

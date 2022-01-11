@@ -36,7 +36,7 @@ class Ui_SRM_Expert_Main_Window(object):
     def setupUi(self, SRM_Expert_Main_Window):
         if not SRM_Expert_Main_Window.objectName():
             SRM_Expert_Main_Window.setObjectName(u"SRM_Expert_Main_Window")
-        SRM_Expert_Main_Window.resize(407, 729)
+        SRM_Expert_Main_Window.resize(407, 793)
         self.centralwidget = QWidget(SRM_Expert_Main_Window)
         self.centralwidget.setObjectName(u"centralwidget")
         self.gridLayout_2 = QGridLayout(self.centralwidget)
@@ -72,7 +72,6 @@ class Ui_SRM_Expert_Main_Window(object):
 
         self.horizontalLayout_7.addWidget(self.le_supplier_name)
 
-
         self.verticalLayout_2.addLayout(self.horizontalLayout_7)
 
         self.horizontalLayout_8 = QHBoxLayout()
@@ -94,7 +93,6 @@ class Ui_SRM_Expert_Main_Window(object):
         self.le_tax_id.setFont(font2)
 
         self.horizontalLayout_8.addWidget(self.le_tax_id)
-
 
         self.verticalLayout_2.addLayout(self.horizontalLayout_8)
 
@@ -118,16 +116,13 @@ class Ui_SRM_Expert_Main_Window(object):
 
         self.horizontalLayout_9.addWidget(self.le_reg_id)
 
-
         self.verticalLayout_2.addLayout(self.horizontalLayout_9)
-
 
         self.horizontalLayout_10.addLayout(self.verticalLayout_2)
 
         self.horizontalSpacer_6 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_10.addItem(self.horizontalSpacer_6)
-
 
         self.gridLayout_2.addLayout(self.horizontalLayout_10, 0, 0, 1, 1)
 
@@ -170,7 +165,6 @@ class Ui_SRM_Expert_Main_Window(object):
 
         self.horizontalLayout.addItem(self.horizontalSpacer)
 
-
         self.verticalLayout_3.addLayout(self.horizontalLayout)
 
         self.horizontalLayout_3 = QHBoxLayout()
@@ -197,16 +191,13 @@ class Ui_SRM_Expert_Main_Window(object):
 
         self.verticalLayout.addWidget(self.radio_type_long)
 
-
         self.horizontalLayout_3.addLayout(self.verticalLayout)
 
         self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_3.addItem(self.horizontalSpacer_2)
 
-
         self.verticalLayout_3.addLayout(self.horizontalLayout_3)
-
 
         self.gridLayout_2.addLayout(self.verticalLayout_3, 2, 0, 1, 1)
 
@@ -238,7 +229,6 @@ class Ui_SRM_Expert_Main_Window(object):
 
         self.horizontalLayout_2.addItem(self.horizontalSpacer_3)
 
-
         self.gridLayout_2.addLayout(self.horizontalLayout_2, 3, 0, 1, 1)
 
         self.horizontalLayout_4 = QHBoxLayout()
@@ -264,7 +254,6 @@ class Ui_SRM_Expert_Main_Window(object):
         self.le_overall_quality.setFont(font4)
 
         self.horizontalLayout_4.addWidget(self.le_overall_quality)
-
 
         self.gridLayout_2.addLayout(self.horizontalLayout_4, 4, 0, 1, 1)
 
@@ -296,7 +285,6 @@ class Ui_SRM_Expert_Main_Window(object):
 
         self.horizontalLayout_5.addItem(self.horizontalSpacer_4)
 
-
         self.gridLayout_2.addLayout(self.horizontalLayout_5, 5, 0, 1, 1)
 
         self.horizontalLayout_6 = QHBoxLayout()
@@ -327,7 +315,6 @@ class Ui_SRM_Expert_Main_Window(object):
 
         self.horizontalLayout_6.addItem(self.horizontalSpacer_5)
 
-
         self.gridLayout_2.addLayout(self.horizontalLayout_6, 6, 0, 1, 1)
 
         self.horizontalLayout_11 = QHBoxLayout()
@@ -353,7 +340,6 @@ class Ui_SRM_Expert_Main_Window(object):
         self.le_information_share.setFont(font4)
 
         self.horizontalLayout_11.addWidget(self.le_information_share)
-
 
         self.gridLayout_2.addLayout(self.horizontalLayout_11, 7, 0, 1, 1)
 
@@ -382,7 +368,6 @@ class Ui_SRM_Expert_Main_Window(object):
 
         self.horizontalLayout_12.addWidget(self.le_overall_communications)
 
-
         self.gridLayout_2.addLayout(self.horizontalLayout_12, 8, 0, 1, 1)
 
         self.horizontalLayout_13 = QHBoxLayout()
@@ -408,7 +393,6 @@ class Ui_SRM_Expert_Main_Window(object):
         self.le_financial_sustainability.setFont(font4)
 
         self.horizontalLayout_13.addWidget(self.le_financial_sustainability)
-
 
         self.gridLayout_2.addLayout(self.horizontalLayout_13, 9, 0, 1, 1)
 
@@ -440,7 +424,6 @@ class Ui_SRM_Expert_Main_Window(object):
 
         self.horizontalLayout_14.addItem(self.horizontalSpacer_7)
 
-
         self.gridLayout_2.addLayout(self.horizontalLayout_14, 10, 0, 1, 1)
 
         self.horizontalLayout_15 = QHBoxLayout()
@@ -456,7 +439,6 @@ class Ui_SRM_Expert_Main_Window(object):
 
         self.horizontalLayout_15.addItem(self.horizontalSpacer_8)
 
-
         self.gridLayout_2.addLayout(self.horizontalLayout_15, 11, 0, 1, 1)
 
         self.horizontalLayout_16 = QHBoxLayout()
@@ -470,45 +452,29 @@ class Ui_SRM_Expert_Main_Window(object):
 
         self.gridLayout = QGridLayout()
         self.gridLayout.setObjectName(u"gridLayout")
-        self.le_court_partp_plaintiff = QLineEdit(self.centralwidget)
-        self.le_court_partp_plaintiff.setObjectName(u"le_court_partp_plaintiff")
-        self.le_court_partp_plaintiff.setMinimumSize(QSize(35, 0))
-        self.le_court_partp_plaintiff.setMaximumSize(QSize(35, 16777215))
-        self.le_court_partp_plaintiff.setFont(font4)
-
-        self.gridLayout.addWidget(self.le_court_partp_plaintiff, 0, 0, 1, 1)
-
         self.label_27 = QLabel(self.centralwidget)
         self.label_27.setObjectName(u"label_27")
         self.label_27.setMinimumSize(QSize(100, 0))
         self.label_27.setMaximumSize(QSize(100, 16777215))
         self.label_27.setFont(font4)
 
-        self.gridLayout.addWidget(self.label_27, 0, 1, 1, 1)
+        self.gridLayout.addWidget(self.label_27, 1, 2, 1, 1)
 
-        self.le_court_partp_defendant = QLineEdit(self.centralwidget)
-        self.le_court_partp_defendant.setObjectName(u"le_court_partp_defendant")
-        self.le_court_partp_defendant.setMinimumSize(QSize(35, 0))
-        self.le_court_partp_defendant.setMaximumSize(QSize(35, 16777215))
-        self.le_court_partp_defendant.setFont(font4)
+        self.le_court_partp_plaintiff_w = QLineEdit(self.centralwidget)
+        self.le_court_partp_plaintiff_w.setObjectName(u"le_court_partp_plaintiff_w")
+        self.le_court_partp_plaintiff_w.setMinimumSize(QSize(35, 0))
+        self.le_court_partp_plaintiff_w.setMaximumSize(QSize(35, 16777215))
+        self.le_court_partp_plaintiff_w.setFont(font4)
 
-        self.gridLayout.addWidget(self.le_court_partp_defendant, 1, 0, 1, 1)
+        self.gridLayout.addWidget(self.le_court_partp_plaintiff_w, 1, 0, 1, 1)
 
-        self.label_28 = QLabel(self.centralwidget)
-        self.label_28.setObjectName(u"label_28")
-        self.label_28.setMinimumSize(QSize(100, 0))
-        self.label_28.setMaximumSize(QSize(100, 16777215))
-        self.label_28.setFont(font4)
+        self.le_court_partp_defendant_w = QLineEdit(self.centralwidget)
+        self.le_court_partp_defendant_w.setObjectName(u"le_court_partp_defendant_w")
+        self.le_court_partp_defendant_w.setMinimumSize(QSize(35, 0))
+        self.le_court_partp_defendant_w.setMaximumSize(QSize(35, 16777215))
+        self.le_court_partp_defendant_w.setFont(font4)
 
-        self.gridLayout.addWidget(self.label_28, 1, 1, 1, 1)
-
-        self.le_court_partp_third_side = QLineEdit(self.centralwidget)
-        self.le_court_partp_third_side.setObjectName(u"le_court_partp_third_side")
-        self.le_court_partp_third_side.setMinimumSize(QSize(35, 0))
-        self.le_court_partp_third_side.setMaximumSize(QSize(35, 16777215))
-        self.le_court_partp_third_side.setFont(font4)
-
-        self.gridLayout.addWidget(self.le_court_partp_third_side, 2, 0, 1, 1)
+        self.gridLayout.addWidget(self.le_court_partp_defendant_w, 2, 0, 1, 1)
 
         self.label_26 = QLabel(self.centralwidget)
         self.label_26.setObjectName(u"label_26")
@@ -516,15 +482,61 @@ class Ui_SRM_Expert_Main_Window(object):
         self.label_26.setMaximumSize(QSize(100, 16777215))
         self.label_26.setFont(font4)
 
-        self.gridLayout.addWidget(self.label_26, 2, 1, 1, 1)
+        self.gridLayout.addWidget(self.label_26, 3, 2, 1, 1)
 
+        self.le_court_partp_plaintiff_l = QLineEdit(self.centralwidget)
+        self.le_court_partp_plaintiff_l.setObjectName(u"le_court_partp_plaintiff_l")
+        self.le_court_partp_plaintiff_l.setMinimumSize(QSize(35, 0))
+        self.le_court_partp_plaintiff_l.setMaximumSize(QSize(35, 16777215))
+        self.le_court_partp_plaintiff_l.setFont(font4)
+
+        self.gridLayout.addWidget(self.le_court_partp_plaintiff_l, 1, 1, 1, 1)
+
+        self.le_court_partp_defendant_l = QLineEdit(self.centralwidget)
+        self.le_court_partp_defendant_l.setObjectName(u"le_court_partp_defendant_l")
+        self.le_court_partp_defendant_l.setMinimumSize(QSize(35, 0))
+        self.le_court_partp_defendant_l.setMaximumSize(QSize(35, 16777215))
+        self.le_court_partp_defendant_l.setFont(font4)
+
+        self.gridLayout.addWidget(self.le_court_partp_defendant_l, 2, 1, 1, 1)
+
+        self.label_28 = QLabel(self.centralwidget)
+        self.label_28.setObjectName(u"label_28")
+        self.label_28.setMinimumSize(QSize(100, 0))
+        self.label_28.setMaximumSize(QSize(100, 16777215))
+        self.label_28.setFont(font4)
+
+        self.gridLayout.addWidget(self.label_28, 2, 2, 1, 1)
+
+        self.label_31 = QLabel(self.centralwidget)
+        self.label_31.setObjectName(u"label_31")
+        self.label_31.setMinimumSize(QSize(35, 0))
+        self.label_31.setMaximumSize(QSize(35, 16777215))
+        self.label_31.setFont(font4)
+
+        self.gridLayout.addWidget(self.label_31, 0, 0, 1, 1)
+
+        self.label_30 = QLabel(self.centralwidget)
+        self.label_30.setObjectName(u"label_30")
+        self.label_30.setMinimumSize(QSize(35, 0))
+        self.label_30.setMaximumSize(QSize(35, 16777215))
+        self.label_30.setFont(font4)
+
+        self.gridLayout.addWidget(self.label_30, 0, 1, 1, 1)
+
+        self.le_court_partp_third_side = QLineEdit(self.centralwidget)
+        self.le_court_partp_third_side.setObjectName(u"le_court_partp_third_side")
+        self.le_court_partp_third_side.setMinimumSize(QSize(35, 0))
+        self.le_court_partp_third_side.setMaximumSize(QSize(75, 16777215))
+        self.le_court_partp_third_side.setFont(font4)
+
+        self.gridLayout.addWidget(self.le_court_partp_third_side, 3, 0, 1, 2)
 
         self.horizontalLayout_16.addLayout(self.gridLayout)
 
         self.horizontalSpacer_9 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_16.addItem(self.horizontalSpacer_9)
-
 
         self.gridLayout_2.addLayout(self.horizontalLayout_16, 12, 0, 1, 1)
 
@@ -552,7 +564,6 @@ class Ui_SRM_Expert_Main_Window(object):
 
         self.horizontalLayout_17.addWidget(self.le_environment_safety)
 
-
         self.gridLayout_2.addLayout(self.horizontalLayout_17, 13, 0, 1, 1)
 
         self.horizontalLayout_18 = QHBoxLayout()
@@ -579,7 +590,6 @@ class Ui_SRM_Expert_Main_Window(object):
 
         self.horizontalLayout_18.addWidget(self.le_work_safety)
 
-
         self.gridLayout_2.addLayout(self.horizontalLayout_18, 14, 0, 1, 1)
 
         self.horizontalLayout_19 = QHBoxLayout()
@@ -595,7 +605,6 @@ class Ui_SRM_Expert_Main_Window(object):
 
         self.horizontalLayout_19.addWidget(self.btn_calculate_score)
 
-
         self.gridLayout_2.addLayout(self.horizontalLayout_19, 15, 0, 1, 1)
 
         SRM_Expert_Main_Window.setCentralWidget(self.centralwidget)
@@ -607,6 +616,8 @@ class Ui_SRM_Expert_Main_Window(object):
         self.retranslateUi(SRM_Expert_Main_Window)
 
         QMetaObject.connectSlotsByName(SRM_Expert_Main_Window)
+
+        #END OF GENERATED CODE INSERTION POINT
         self.init_object_lists()
         self.init_connections()
     # setupUi
@@ -626,7 +637,7 @@ class Ui_SRM_Expert_Main_Window(object):
         self.radio_type_one_time.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"One-time", None))
         self.radio_type_long.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"Long", None))
         self.label_3.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"Experience", None))
-        self.le_experience.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"0", None))
+        self.le_experience.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"150", None))
         self.label_15.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"years", None))
         self.label_4.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"Overall quality", None))
         self.le_overall_quality.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"0", None))
@@ -643,16 +654,20 @@ class Ui_SRM_Expert_Main_Window(object):
         self.label_7.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"Financial sustainability", None))
         self.le_financial_sustainability.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"0", None))
         self.label_24.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"Overall compliance", None))
-        self.le_overall_compliance.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"0", None))
+        self.le_overall_compliance.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"100", None))
         self.label_25.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"%", None))
         self.cb_has_necessary_certification.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"Has necessary certifications", None))
         self.label_29.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"Participation in courts", None))
-        self.le_court_partp_plaintiff.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"0", None))
         self.label_27.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"As a plaintiff", None))
-        self.le_court_partp_defendant.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"0", None))
-        self.label_28.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"As a defendant", None))
-        self.le_court_partp_third_side.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"0", None))
+        self.le_court_partp_plaintiff_w.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"0", None))
+        self.le_court_partp_defendant_w.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"0", None))
         self.label_26.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"As a third side", None))
+        self.le_court_partp_plaintiff_l.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"0", None))
+        self.le_court_partp_defendant_l.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"0", None))
+        self.label_28.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"As a defendant", None))
+        self.label_31.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"Won", None))
+        self.label_30.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"Lost", None))
+        self.le_court_partp_third_side.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"0", None))
         self.label_8.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"Environment safety", None))
         self.le_environment_safety.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"0", None))
         self.label_9.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"Work safety", None))
@@ -680,8 +695,10 @@ class Ui_SRM_Expert_Main_Window(object):
             "financial_sustainability": float(self.le_financial_sustainability.text()),
             "overall_compliance": float(self.le_overall_compliance.text()),
             "has_necessary_certification": has_certs,
-            "court_history_defender": int(self.le_court_partp_defendant.text()),
-            "court_history_plaintiff": int(self.le_court_partp_plaintiff.text()),
+            "court_history_defender_won": int(self.le_court_partp_defendant_w.text()),
+            "court_history_plaintiff_won": int(self.le_court_partp_plaintiff_w.text()),
+            "court_history_defender_lose": int(self.le_court_partp_defendant_l.text()),
+            "court_history_plaintiff_lose": int(self.le_court_partp_plaintiff_l.text()),
             "court_history_third_side": int(self.le_court_partp_third_side.text()),
             "environment_safety": float(self.le_environment_safety.text()),
             "work_safety": float(self.le_work_safety.text())
@@ -689,7 +706,18 @@ class Ui_SRM_Expert_Main_Window(object):
         }
         current_results[self.le_supplier_name.text()] = new_results
         self.fuzzy_module_main.set_variables_val_in_module(new_results)
-        print(self.fuzzy_module_main.fire_fuzzy_system(0))
+        res = self.fuzzy_module_main.fire_main_fuzzy_system(0)
+        print(res)
+        # weighted_scores = {}
+        # for k, v in res.items():
+        #     rescale_weight = util.load_score_weights('RESULT_WEIGHT_FACTOR')
+        #     dist = rescale_weight*(abs(5 - v)/4)
+        #     if v >= 5:
+        #         weighted_scores[k] = v + dist
+        #     elif v < 5:
+        #         weighted_scores[k] = v - dist
+        #print(weighted_scores)
+
 
         with open(global_params.RESULT_SCORES_FILE, 'w') as json_file:
             json_file.write(json.dumps(current_results, indent=4))

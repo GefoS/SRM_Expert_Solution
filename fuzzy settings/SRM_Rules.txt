@@ -5,6 +5,7 @@ IF ((contract_price IS Medium) AND (contract_type IS One_time)) THEN (contract_r
 IF (contract_price IS Cheap) THEN (contract_risk IS Stable)
 IF (contract_type IS Long) THEN (contract_risk IS Risky)
 Rule_Cluster:Main
+//Supplying  quality overall (delays)
 IF ((delayed_deliveries IS Never) AND (average_delay_delivery IS None)) THEN (Supplying IS best)
 IF ((delayed_deliveries IS Rare) OR (average_delay_delivery IS Few)) THEN (Supplying IS best)
 IF ((delayed_deliveries IS Rare) OR (average_delay_delivery IS None)) THEN (Supplying IS best)
@@ -13,8 +14,54 @@ IF ((delayed_deliveries IS Usually) OR (average_delay_delivery IS Several)) THEN
 IF ((delayed_deliveries IS Rare) AND (average_delay_delivery IS Many)) THEN (Supplying IS acceptable)
 IF ((delayed_deliveries IS Regularly) AND (average_delay_delivery IS Few)) THEN (Supplying IS acceptable)
 IF ((delayed_deliveries IS Regularly) AND (average_delay_delivery IS Many)) THEN (Supplying IS bad)
+
+//Supplying quality with respect of overall goods or services quality
+//Better quality ---> a bit better supplying
 IF (((delayed_deliveries IS Usually) OR (average_delay_delivery IS Several)) AND (overall_quality IS Good)) THEN (Supplying IS good)
 IF (((delayed_deliveries IS Regularly) AND (average_delay_delivery IS Few))  AND (overall_quality IS Good)) THEN (Supplying IS good)
+IF (((delayed_deliveries IS Rare) AND (average_delay_delivery IS Many))  AND (overall_quality IS Good)) THEN (Supplying IS good)
+
+//Quality of supplying services by vendor as a business partner
+IF ((experience IS Well_experienced) OR (overall_quality IS Good)) THEN (Quality_as_BP IS best)
+IF ((experience IS Experienced) AND (overall_quality IS Good)) THEN (Quality_as_BP IS best)
+IF ((experience IS Experienced) OR (overall_quality IS Medium)) THEN (Quality_as_BP IS good)
+IF ((experience IS Experienced) AND (financial_sustainability IS Low)) THEN (Quality_as_BP IS acceptable)
+IF ((experience IS Experienced) AND (overall_quality IS Low)) THEN (Quality_as_BP IS acceptable)
+IF (((experience IS Experienced) AND (overall_quality IS Low)) AND ((financial_sustainability IS Good) OR (financial_sustainability IS Low))) THEN (Quality_as_BP IS Medium)
+IF ((experience IS Novice) AND (overall_quality IS Good)) THEN (Quality_as_BP IS good)
+IF ((experience IS Novice) AND (overall_quality IS Low)) THEN (Quality_as_BP IS bad)
+IF (experience IS Novice) THEN (Quality_as_BP IS acceptable)
+IF (experience IS No_experience) THEN (Quality_as_BP IS bad)
+IF (overall_quality IS Low) THEN (Quality_as_BP IS acceptable)
+IF (financial_sustainability IS Bankruptcy) THEN (Quality_as_BP IS bad)
+IF ((experience IS No_experience) AND (overall_quality IS Low)) THEN (Quality_as_BP IS bad)
+
+//Communications
+IF ((information_share IS Rich) OR (overall_communications IS Good)) THEN (Communications IS best)
+IF ((information_share IS Poor) AND (overall_communications IS Good)) THEN (Communications IS acceptable)
+IF ((information_share IS Rich) AND (overall_communications IS Low)) THEN (Communications IS acceptable)
+IF ((information_share IS Medium) OR (overall_communications IS Medium)) THEN (Communications IS good)
+IF ((information_share IS Poor) OR (overall_communications IS Low)) THEN (Communications IS acceptable)
+IF ((information_share IS Poor) AND (overall_communications IS Low)) THEN (Communications IS bad)
+
+//Legal governance and compliance
+IF ((court_history IS Bad) AND (overall_compliance IS Low)) THEN (Legal_and_Compliance IS bad)
+IF ((overall_compliance IS Low) AND (has_necessary_certification IS No)) THEN (Legal_and_Compliance IS bad)
+IF (has_necessary_certification IS Yes) THEN (Legal_and_Compliance IS best)
+IF (has_necessary_certification IS No) THEN (Legal_and_Compliance IS bad)
+IF ((overall_compliance IS Low) AND (court_history IS Good)) THEN (Legal_and_Compliance IS acceptable)
+IF ((overall_compliance IS Good) AND (court_history IS Bad)) THEN (Legal_and_Compliance IS acceptable)
+IF ((overall_compliance IS Good) AND (court_history IS Good)) THEN (Legal_and_Compliance IS best)
+IF ((overall_compliance IS Medium) OR (court_history IS Proper)) THEN (Legal_and_Compliance IS good)
+
+//EHS 
+IF ((environment_safety IS Good) OR (work_safety IS Good)) THEN (EHS IS best)
+IF ((environment_safety IS Low) AND (work_safety IS Good)) THEN (EHS IS acceptable)
+IF ((environment_safety IS Good) AND (work_safety IS Low)) THEN (EHS IS acceptable)
+IF ((environment_safety IS Medium) OR (work_safety IS Medium)) THEN (EHS IS good)
+IF ((environment_safety IS Low) OR (work_safety IS Low)) THEN (EHS IS acceptable)
+IF ((environment_safety IS Low) AND (work_safety IS Low)) THEN (EHS IS bad)
+
 Rule_Cluster:Test
 IF (((delayed_deliveries IS Rare) OR (delayed_deliveries IS Never)) AND (average_delay_delivery IS None)) THEN (Quality IS best)
 IF (((delayed_deliveries IS Usually) OR (delayed_deliveries IS Regularly)) AND ((average_delay_delivery IS Few) OR (average_delay_delivery IS Several))) THEN (Quality IS acceptable)

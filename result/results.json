@@ -1,20 +1,22 @@
 {
     "ER-Telekom Holding": {
-        "contract_price": 650000.0,
+        "contract_price": 0.0,
         "contract_type": 2,
-        "experience": 6.0,
-        "overall_quality": 0.0,
-        "delayed_deliveries": 10.0,
+        "experience": 4.0,
+        "overall_quality": 7.4,
+        "delayed_deliveries": 15.0,
         "average_delay_delivery": 2.0,
-        "information_share": 0.0,
-        "overall_communications": 0.0,
-        "financial_sustainability": 0.0,
-        "overall_compliance": 0.0,
-        "has_necessary_certification": 0,
-        "court_history_defender": 0,
-        "court_history_plaintiff": 0,
+        "information_share": 8.9,
+        "overall_communications": 8.2,
+        "financial_sustainability": 7.9,
+        "overall_compliance": 76.0,
+        "has_necessary_certification": 2,
+        "court_history_defender_won": 0,
+        "court_history_plaintiff_won": 0,
+        "court_history_defender_lose": 0,
+        "court_history_plaintiff_lose": 0,
         "court_history_third_side": 0,
-        "environment_safety": 0.0,
-        "work_safety": 0.0
+        "environment_safety": 8.6,
+        "work_safety": 9.0
     }
 }
