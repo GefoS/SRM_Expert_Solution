@@ -132,3 +132,18 @@ def load_score_weights(version):
     with open(global_params.SCORE_WEIGHTS_FILE, "r") as json_file:
         weights = json.loads(json_file.read())
     return weights.get(str(version))
+
+
+def load_court_settings():
+    with open(global_params.COURT_PARTP_SETTINGS, "r") as json_file:
+        settings = json.loads(json_file.read())
+    return settings
+
+
+def get_score_assessment(score):
+    if score <= 4.5:
+        return "0"
+    elif score < 7:
+        return "1"
+    else:
+        return "2"

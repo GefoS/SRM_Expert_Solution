@@ -1,10 +1,12 @@
 {
-    "RESULT_WEIGHT_FACTOR": 0.9,
+    "RESULT_WEIGHT_FACTOR": 0.8,
+    "RESCALE_MIN": 0.15,
+    "RESCALE_MAX": 0.3,
     "0": {
-        "Supplying": 0.4,
+        "Supplying": 0.3,
         "Quality_as_BP": 0.3,
-        "Communications": 0.05,
+        "Communications": 0.1,
         "Legal_and_Compliance": 0.2,
-        "EHS": 0.05
+        "EHS": 0.1
     }
 }

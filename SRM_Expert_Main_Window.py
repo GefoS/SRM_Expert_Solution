@@ -8,6 +8,8 @@ import global_params
 import util
 from fuzzy_module import FuzzyModule
 
+from Ui_ScoresDialogBox import ScoresWindow
+
 
 class Ui_SRM_Expert_Main_Window(object):
 
@@ -15,6 +17,12 @@ class Ui_SRM_Expert_Main_Window(object):
         self.fuzzy_module_main = FuzzyModule()
 
     def init_object_lists(self):
+
+        self.scores_dialog = ScoresWindow()
+
+        with open(global_params.SCORE_ASSESSMENTS_FILE, "r") as json_file:
+            self.score_assessment = json.loads(json_file.read())
+
         self.sliders = [
             self.sld_overall_quality,
             self.sld_information_share,
@@ -625,11 +633,11 @@ class Ui_SRM_Expert_Main_Window(object):
     def retranslateUi(self, SRM_Expert_Main_Window):
         SRM_Expert_Main_Window.setWindowTitle(QCoreApplication.translate("SRM_Expert_Main_Window", u"SRM Expert Solution", None))
         self.label_21.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"Supplier", None))
-        self.le_supplier_name.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"ER-Telekom Holding", None))
+        #self.le_supplier_name.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"ER-Telekom Holding", None))
         self.label_22.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"Tax ID", None))
-        self.le_tax_id.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"5902202276", None))
+        #self.le_tax_id.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"5902202276", None))
         self.label_23.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"Registration num", None))
-        self.le_reg_id.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"1065902028620", None))
+        #self.le_reg_id.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"1065902028620", None))
         self.label.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"Contract price", None))
         self.le_contract_price.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"0", None))
         self.label_16.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"USD", None))
@@ -637,7 +645,7 @@ class Ui_SRM_Expert_Main_Window(object):
         self.radio_type_one_time.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"One-time", None))
         self.radio_type_long.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"Long", None))
         self.label_3.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"Experience", None))
-        self.le_experience.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"150", None))
+        #self.le_experience.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"150", None))
         self.label_15.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"years", None))
         self.label_4.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"Overall quality", None))
         self.le_overall_quality.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"0", None))
@@ -654,7 +662,7 @@ class Ui_SRM_Expert_Main_Window(object):
         self.label_7.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"Financial sustainability", None))
         self.le_financial_sustainability.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"0", None))
         self.label_24.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"Overall compliance", None))
-        self.le_overall_compliance.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"100", None))
+        #self.le_overall_compliance.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"100", None))
         self.label_25.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"%", None))
         self.cb_has_necessary_certification.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"Has necessary certifications", None))
         self.label_29.setText(QCoreApplication.translate("SRM_Expert_Main_Window", u"Participation in courts", None))
@@ -706,17 +714,69 @@ class Ui_SRM_Expert_Main_Window(object):
         }
         current_results[self.le_supplier_name.text()] = new_results
         self.fuzzy_module_main.set_variables_val_in_module(new_results)
-        res = self.fuzzy_module_main.fire_main_fuzzy_system(0)
-        print(res)
-        # weighted_scores = {}
-        # for k, v in res.items():
-        #     rescale_weight = util.load_score_weights('RESULT_WEIGHT_FACTOR')
-        #     dist = rescale_weight*(abs(5 - v)/4)
-        #     if v >= 5:
-        #         weighted_scores[k] = v + dist
-        #     elif v < 5:
-        #         weighted_scores[k] = v - dist
-        #print(weighted_scores)
+        scores, total_score = self.fuzzy_module_main.fire_main_fuzzy_system(0)
+        print(scores, total_score)
+        #total
+        total_assessment = util.get_score_assessment(total_score)
+        self.scores_dialog.ui.lb_total_score.setText(str(total_score))
+        self.scores_dialog.ui.lb_final_result.setText(self.score_assessment.get(
+            'Total').get(total_assessment))
+        self.scores_dialog.ui.lb_total_score.setStyleSheet(
+            self.scores_dialog.ui.get_style_by_assessment(total_assessment))
+
+        if not self.scores_dialog.isVisible():
+            self.scores_dialog.show()
+        #self.scores_dialog.ui.lb_total_score.setText(str(res[1]))
+        contract_risk = self.fuzzy_module_main.fire_contracting_fuzzy_system(new_results)
+        if contract_risk == 3:
+            self.scores_dialog.ui.lb_contract_risk.setText('Stable')
+            self.scores_dialog.ui.lb_contract_risk.setStyleSheet(self.scores_dialog.ui.good_score_style)
+        elif contract_risk == 2:
+            self.scores_dialog.ui.lb_contract_risk.setText('Risky')
+            self.scores_dialog.ui.lb_contract_risk.setStyleSheet(self.scores_dialog.ui.medium_score_style)
+        else:
+            self.scores_dialog.ui.lb_contract_risk.setText('Very risky')
+            self.scores_dialog.ui.lb_contract_risk.setStyleSheet(self.scores_dialog.ui.bad_score_style)
+
+        #supplying
+        supply_score = float(scores.get('Supplying'))
+        supply_assessment = util.get_score_assessment(supply_score)
+        self.scores_dialog.ui.lb_Supplying.setText(str(supply_score))
+        self.scores_dialog.ui.lb_supplying_result.setText(self.score_assessment.get(
+            'Supplying').get(supply_assessment))
+        self.scores_dialog.ui.lb_Supplying.setStyleSheet(self.scores_dialog.ui.get_style_by_assessment(supply_assessment))
+
+        communications_score = float(scores.get('Communications'))
+        communications_assessment = util.get_score_assessment(communications_score)
+        self.scores_dialog.ui.lb_Communications.setText(str(communications_score))
+        self.scores_dialog.ui.lb_communications_result.setText(self.score_assessment.get(
+            'Communications').get(communications_assessment))
+        self.scores_dialog.ui.lb_Communications.setStyleSheet(
+            self.scores_dialog.ui.get_style_by_assessment(communications_assessment))
+
+        legal_score = float(scores.get('Legal_and_Compliance'))
+        legal_assessment = util.get_score_assessment(legal_score)
+        self.scores_dialog.ui.lb_Legal_and_Compliance.setText(str(legal_score))
+        self.scores_dialog.ui.lb_compliance_result.setText(self.score_assessment.get(
+            'Legal_and_Compliance').get(legal_assessment))
+        self.scores_dialog.ui.lb_Legal_and_Compliance.setStyleSheet(
+            self.scores_dialog.ui.get_style_by_assessment(legal_assessment))
+
+        EHS_score = float(scores.get('EHS'))
+        EHS_assessment = util.get_score_assessment(EHS_score)
+        self.scores_dialog.ui.lb_EHS.setText(str(EHS_score))
+        self.scores_dialog.ui.lb_ehs_result.setText(self.score_assessment.get(
+            'EHS').get(EHS_assessment))
+        self.scores_dialog.ui.lb_EHS.setStyleSheet(
+            self.scores_dialog.ui.get_style_by_assessment(EHS_assessment))
+
+        Quality_as_BP_score = float(scores.get('Quality_as_BP'))
+        Quality_as_BP_assessment = util.get_score_assessment(Quality_as_BP_score)
+        self.scores_dialog.ui.lb_Quality_as_BP.setText(str(Quality_as_BP_score))
+        self.scores_dialog.ui.lb_quality_bp_result.setText(self.score_assessment.get(
+            'Supplying').get(Quality_as_BP_assessment))
+        self.scores_dialog.ui.lb_Quality_as_BP.setStyleSheet(
+            self.scores_dialog.ui.get_style_by_assessment(Quality_as_BP_assessment))
 
 
         with open(global_params.RESULT_SCORES_FILE, 'w') as json_file:

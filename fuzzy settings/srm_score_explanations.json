@@ -1,0 +1,32 @@
+{
+    "Supplying": {
+        "0": "The supplier has clearly not built a well-functioning supply chain. If we'll work with this supplier, there is a high risk of disruption of our supply chains",
+        "1": "The supplier provides quite reliable supply chains. There is a small risk of disruption that is worth considering",
+        "2": "That is the supplier our company can rely on. The supplier can offer quality, reliable and stable supplies throughout the developed supply chains"
+    },
+    "Communications": {
+        "0": "Those with whom it is difficult to find connections and build relationships are quite difficult to work with. Consider possible communications gaps",
+        "1": "Try to find common ground with the supplier and the work will be built perfectly",
+        "2": "With whom there are no problems in communication and making relationships, it is easy to do business with"
+    },
+    "Legal_and_Compliance": {
+        "0": "You should not work with those who spit on the law and do not provide the necessary certifications. In addition, it is worth paying attention to the court history of the supplier",
+        "1": "You should not work with those who spit on the law and do not provide the necessary certifications. In addition, it is worth paying attention to the court history of the supplier",
+        "2": "Who follows the law, works legally and has necessary certifications is our possible business partner"
+    },
+    "Quality_as_BP": {
+        "0": "You should not sacrifice the quality of the services and materials you receive by working with unverified and inexperienced suppliers",
+        "1": "The supplier that delivers quality service, delivers good material, and has a proven track record in the market is a great link in our supply chain",
+        "2": "The supplier that delivers quality service, delivers good material, and has a proven track record in the market is a great link in our supply chain"
+    },
+    "EHS": {
+        "0": "Nowadays, it is important to pay attention to whether the supplier respects the safety of the environment and the safety of its employees.",
+        "1": "Nowadays, it is important to pay attention to whether the supplier respects the safety of the environment and the safety of its employees.",
+        "2": "Nowadays, it is important to pay attention to whether the supplier respects the safety of the environment and the safety of its employees."
+    },
+    "Total": {
+        "0": "Better to find new supplier",
+        "1": "We can work with the supplier taking into account all risks",
+        "2": "Great supplier, must work with him"
+    }
+}
